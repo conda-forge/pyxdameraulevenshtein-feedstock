@@ -20,7 +20,7 @@ requirements:
     - python
     - setuptools
     - cython
-    - numpy
+    - numpy x.x
   run:
     - python
     - numpy x.x
