@@ -1,6 +1,6 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.4.1" %}
-{% set sha256 = "24f031120b3e62a171c3b3a6f17afdddec8aacb83504257589af20dea4293323" %}
+{% set version = "1.5" %}
+{% set sha256 = "00b836cdb7cff24abe20c2fdc6cdda4ac24413a82cf318c983980ce4aaec7e16" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
