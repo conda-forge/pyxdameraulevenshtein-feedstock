@@ -13,7 +13,10 @@ source:
 
 build:
   number: 1001
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv"
+  # Skip Python 3.7+ as the C sources need to be rebuilt from cython for 3.7
+  # compatability but are not part of the package.
+  skip: true  # [py>36]
 
 requirements:
   build:
