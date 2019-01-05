@@ -12,18 +12,24 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1001
+  script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv"
+  # Skip Python 3.7+ as the C sources need to be rebuilt from cython for 3.7
+  # compatability but are not part of the package.
+  skip: true  # [py>36]
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
+    - pip
     - setuptools
     - cython
-    - numpy x.x
+    - numpy
   run:
     - python
-    - numpy x.x
+    - {{ pin_compatible('numpy') }}
 
 test:
   imports:
