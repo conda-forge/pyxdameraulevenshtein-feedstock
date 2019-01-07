@@ -1,6 +1,6 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.5.1" %}
-{% set sha256 = "188a4ca005cc18bef09aa2e37beecc918a7e8c00d7fbf5f08d7bc0f93e9cf850" %}
+{% set version = "1.5.2" %}
+{% set sha256 = "107628d8f9e97a58f0007facbcc40b806e43bcda693f597027efbfce941ac641" %}
 
 package:
   name: {{ name|lower }}
