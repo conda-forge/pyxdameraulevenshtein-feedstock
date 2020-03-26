@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv"
   # Skip Python 3.7+ as the C sources need to be rebuilt from cython for 3.7
   # compatability but are not part of the package.
