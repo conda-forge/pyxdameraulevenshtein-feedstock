@@ -3,7 +3,7 @@ About pyxdameraulevenshtein
 
 Home: https://github.com/gfairchild/pyxDamerauLevenshtein
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -171,6 +171,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@CJ-Wright](https://github.com/CJ-Wright/)
 * [@AndLen](https://github.com/AndLen/)
+* [@CJ-Wright](https://github.com/CJ-Wright/)
 
