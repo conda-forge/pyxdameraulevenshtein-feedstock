@@ -37,7 +37,7 @@ test:
 about:
   home: https://github.com/gfairchild/pyxDamerauLevenshtein
   license: BSD-3-Clause
-  license_file: License.txt
+  license_file: LICENSE.txt
   summary: 'High performance Damerau-Levenshtein (DL) edit distance
     algorithm for Python.'
 
