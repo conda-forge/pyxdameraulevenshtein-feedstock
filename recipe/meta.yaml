@@ -1,6 +1,6 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.6.1" %}
-{% set sha256 = "26f843b0af9e04e538c7a2eda51ce9bcbd3f5723a1e5c6ff842fca11f5a08b27" %}
+{% set version = "1.6.2" %}
+{% set sha256 = "e6aab1431b645e9cbd6d980e4db4474fd5205abed25f87d4618254cdaf1ae7ca" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv
   # Skip Python 3.7+ as the C sources need to be rebuilt from cython for 3.7
   # compatability but are not part of the package.
