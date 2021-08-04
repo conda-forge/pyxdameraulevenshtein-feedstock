@@ -1,6 +1,5 @@
 {% set name = "pyxDamerauLevenshtein" %}
 {% set version = "1.7.0" %}
-{% set sha256 = "a85ec151f59455462ae62244d3fc16c16b33ddcf662be3e75bb8f89a862a942b" %}
 
 package:
   name: {{ name|lower }}
@@ -9,14 +8,12 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: a85ec151f59455462ae62244d3fc16c16b33ddcf662be3e75bb8f89a862a942b
 
 build:
-  number: 0
-  script: {{ PYTHON }} -m pip install --no-deps --ignore-installed . -vv
-  # Skip Python 3.7+ as the C sources need to be rebuilt from cython for 3.7
-  # compatability but are not part of the package.
-  skip: true  # [py>36]
+  number: 1
+  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  skip: true  # [py<36]
 
 requirements:
   build:
@@ -34,13 +31,12 @@ requirements:
 test:
   imports:
     - pyxdameraulevenshtein
+
 about:
   home: https://github.com/gfairchild/pyxDamerauLevenshtein
   license: BSD-3-Clause
   license_file: LICENSE.txt
   summary: High performance Damerau-Levenshtein (DL) edit distance algorithm for Python.
-
-  # The remaining entries in this section are optional, but recommended
   description: |
     pyxDamerauLevenshtein implements the Damerau-Levenshtein (DL) edit distance
     algorithm for Python in Cython for high performance.
@@ -50,3 +46,4 @@ about:
 extra:
   recipe-maintainers:
     - CJ-Wright
+    - mrakitin
