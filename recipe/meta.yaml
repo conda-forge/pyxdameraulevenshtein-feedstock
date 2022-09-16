@@ -1,5 +1,5 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.7.0" %}
+{% set version = "1.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/v{{ version }}.tar.gz
-  sha256: a85ec151f59455462ae62244d3fc16c16b33ddcf662be3e75bb8f89a862a942b
+  sha256: e2bd561d97dc5441772379826d665fa8b2bffc2e0180da03b2b29b48f38b97d5
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv --no-deps
   skip: true  # [py<36]
 
@@ -35,7 +35,7 @@ test:
 about:
   home: https://github.com/gfairchild/pyxDamerauLevenshtein
   license: BSD-3-Clause
-  license_file: LICENSE.txt
+  license_file: LICENSE
   summary: High performance Damerau-Levenshtein (DL) edit distance algorithm for Python.
   description: |
     pyxDamerauLevenshtein implements the Damerau-Levenshtein (DL) edit distance
