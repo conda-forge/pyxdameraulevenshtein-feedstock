@@ -12,7 +12,9 @@ source:
 
 build:
   number: 2
-  script: {{ PYTHON }} -m pip install . -vv --no-deps
+  script: |
+    cython pyxdameraulevenshtein/_initialize.pyx
+    {{ PYTHON }} -m pip install . -vv --no-deps
   skip: true  # [py<36]
 
 requirements:
