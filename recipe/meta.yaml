@@ -1,5 +1,5 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.7.1" %}
+{% set version = "1.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/v{{ version }}.tar.gz
-  sha256: e2bd561d97dc5441772379826d665fa8b2bffc2e0180da03b2b29b48f38b97d5
+  sha256: d23d3458c87aead9e82eff5b7d3954c5cad64a0023527785e1dda01144b26ca4
 
 build:
-  number: 2
+  number: 0
   script: |
     {{ PYTHON }} -m cython pyxdameraulevenshtein/pyxdameraulevenshtein.pyx
     {{ PYTHON }} -m pip install . -vv --no-deps
@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
