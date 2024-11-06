@@ -11,7 +11,7 @@ source:
   sha256: e2bd561d97dc5441772379826d665fa8b2bffc2e0180da03b2b29b48f38b97d5
 
 build:
-  number: 2
+  number: 3
   script: |
     {{ PYTHON }} -m cython pyxdameraulevenshtein/pyxdameraulevenshtein.pyx
     {{ PYTHON }} -m pip install . -vv --no-deps
@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - python
     - pip
