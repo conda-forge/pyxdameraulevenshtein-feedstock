@@ -13,8 +13,7 @@ source:
 build:
   number: 0
   script: |
-    {{ PYTHON }} -m cython pyxdameraulevenshtein/pyxdameraulevenshtein.pyx
-    {{ PYTHON }} -m pip install . -vv --no-deps
+    {{ PYTHON }} -m pip install . -vv --no-deps  --no-build-isolation
   skip: true  # [py<36]
 
 requirements:
