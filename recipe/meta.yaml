@@ -6,9 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/v{{ version }}.tar.gz
-  sha256: 6a2a2ab90f31744f92c59a69344d6aa489565fdff062d9dc3ceb1d9d1a8e5fb5
+  sha256: 56d879e080d2fc699dc43e10ae6302f6fc30899f963bc13cb3a695c5c1e5d2a8
 
 build:
   number: 2
