@@ -46,5 +46,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - conda-forge/event-model
     - CJ-Wright
     - mrakitin
