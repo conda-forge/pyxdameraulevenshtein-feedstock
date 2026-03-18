@@ -1,5 +1,5 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.9.0" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/v{{ version }}.tar.gz
-  sha256: 56d879e080d2fc699dc43e10ae6302f6fc30899f963bc13cb3a695c5c1e5d2a8
+  sha256: 45d32868ea30eaf3df8c0e52854319654391063df061343370cc985527c2e819
 
 build:
-  number: 2
+  number: 0
   script: |
     {{ PYTHON }} -m pip install . -vv --no-deps  --no-build-isolation
   skip: true  # [py<36]
