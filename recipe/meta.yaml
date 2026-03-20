@@ -1,13 +1,13 @@
 {% set name = "pyxDamerauLevenshtein" %}
-{% set version = "1.10.0" %}
+{% set version = "1.10.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/v{{ version }}.tar.gz
-  sha256: 45d32868ea30eaf3df8c0e52854319654391063df061343370cc985527c2e819
+  url: https://github.com/gfairchild/pyxDamerauLevenshtein/archive/{{ version }}.tar.gz
+  sha256: 9c506ab945610933558f6991cbf7675115119e8b7d8549fa5f899e3dd1ac9cc4
 
 build:
   number: 0
